@@ -1,5 +1,5 @@
-import { motion, animate, useMotionValue, useAnimation } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import {motion, animate, useMotionValue, useAnimation} from 'framer-motion';
+import React, {useEffect, useRef, useState} from 'react';
 
 const ProjectsSection = () => {
   const controls = useAnimation();
@@ -20,7 +20,7 @@ const ProjectsSection = () => {
     let totalWidth = 0;
 
     if (ulElement) {
-      const liElements = ulElement.querySelectorAll("li");
+      const liElements = ulElement.querySelectorAll('li');
 
       liElements.forEach((li) => {
         const style = window.getComputedStyle(li);
@@ -39,7 +39,7 @@ const ProjectsSection = () => {
 
     if (mustFinish) {
       controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
-        ease: "linear",
+        ease: 'linear',
         duration: duration * (1 - xTranslation.get() / finalPosition),
         onComplete: () => {
           setMustFinish(false);
@@ -48,10 +48,10 @@ const ProjectsSection = () => {
       });
     } else {
       controls = animate(xTranslation, [0, finalPosition], {
-        ease: "linear",
+        ease: 'linear',
         duration: duration,
         repeat: Infinity,
-        repeatType: "loop",
+        repeatType: 'loop',
         repeatDelay: 0,
       });
     }
@@ -60,30 +60,38 @@ const ProjectsSection = () => {
   }, [rerender, xTranslation, duration, totalWidth]);
 
   const items = [
-    "Item 1",
-    "Item 2",
-    "Item 3",
-    "Item 4",
-    "Item 5",
-    "Item 6",
-    "Item 7",
-    "Item 8",
+    'Item 1',
+    'Item 2',
+    'Item 3',
+    'Item 4',
+    'Item 5',
+    'Item 6',
+    'Item 7',
+    'Item 8',
   ];
 
   return (
-    <section className="min-h-screen flex justify-start items-center flex-col bg-white w-full overflow-hidden">
-      <div className="w-full px-[5%]">
-        <h1 className="text-[160px] text-black font-bold">Projects</h1>
+    <section className='min-h-screen flex justify-center items-center flex-col bg-white w-full overflow-hidden'>
+      <div className='w-full px-[5%] flex items-center justify-between'>
+        <div>
+          <h1 className='text-[160px] text-black font-bold'>Projects</h1>
 
-        <h4 className="text-5xl w-3/4 font-light tracking-tighter">
-          Here are some of my selected work , i have worked on
-        </h4>
+          <h4 className='text-3xl  font-light tracking-tighter'>
+            Here are some of my selected work , i have worked on
+          </h4>
+        </div>
+
+        <div>
+          <button className='rounded-full bg-black text-3xl my-10 text-white px-6 py-4'>
+            Contact
+          </button>
+        </div>
       </div>
 
-      <div className="relative my-10 w-full">
+      <div className='relative my-10 w-full h-[300px]'>
         <motion.ul
-          className="absolute left-0 flex gap-4 h-[300px]"
-          style={{ x: xTranslation }}
+          className='absolute left-0 flex gap-4 h-[300px]'
+          style={{x: xTranslation}}
           ref={listRef}
           onHoverStart={() => {
             setMustFinish(true);
@@ -98,7 +106,7 @@ const ProjectsSection = () => {
             <motion.li
               animate={controls}
               key={idx}
-              className="flex-[0_0_30vw] mr-5 even:bg-red-400 text-white odd:bg-slate-400 last:mr-0"
+              className='flex-[0_0_30vw] mr-5 even:bg-red-400 text-white odd:bg-slate-400 last:mr-0'
             >
               {item}
             </motion.li>

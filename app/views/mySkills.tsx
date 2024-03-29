@@ -1,5 +1,5 @@
-import { useAnimation, motion } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import {useAnimation, motion} from 'framer-motion';
+import React, {useEffect, useRef} from 'react';
 
 const MySkillsSection = () => {
   const controls = useAnimation();
@@ -14,11 +14,11 @@ const MySkillsSection = () => {
         x: [0, -listWidth / 2],
         transition: {
           duration: 60, // in seconds
-          ease: "linear", //steady
+          ease: 'linear', //steady
         },
       })
       .then(() => {
-        controls.set({ x: 0 });
+        controls.set({x: 0});
         startAnimation();
       });
   };
@@ -28,30 +28,30 @@ const MySkillsSection = () => {
 
   //
   const skills = [
-    "React",
-    "React Native",
-    "Typescript",
-    "NodeJS",
-    "Express",
-    "MongoDB",
-    "PostgreSQL",
-    "GraphQL",
-    "REST API",
-    "Firebase",
-    "AWS",
-    "Docker",
+    'React',
+    'React Native',
+    'Typescript',
+    'NodeJS',
+    'Express',
+    'MongoDB',
+    'PostgreSQL',
+    'GraphQL',
+    'REST API',
+    'Firebase',
+    'AWS',
+    'Docker',
   ];
   const duplicatedItems = [...skills];
 
   return (
-    <section className="min-h-[100vh] bg-black text-white mb-6 flex justify-center items-start flex-col">
-      <h1 className="text-[160px] font-bold tracking-tight px-[5%]">
+    <section className='min-h-[100vh] bg-appGray text-white mb-6 flex justify-center items-start flex-col'>
+      <h1 className='text-[160px] font-bold tracking-tight px-[5%]'>
         Languages
       </h1>
 
       <ul
         ref={listRef}
-        className="flex list-none w-full overflow-x-scroll px-5 mx-0"
+        className='flex list-none w-full overflow-x-scroll px-5 mx-0'
       >
         {duplicatedItems.map((item, index) => (
           <motion.li
