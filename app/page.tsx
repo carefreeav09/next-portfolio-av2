@@ -5,6 +5,7 @@ import TestSection from "./views/test";
 import ProjectsSection from "./views/projects";
 import ExperienceSection from "./views/experience";
 import MySkillsSection from "./views/mySkills";
+import ConnectSection from "./views/connect";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <ProjectsSection />
       <ExperienceSection />
       <MySkillsSection />
-      <TestSection color="bg-blue-200" />
+
+      <ConnectSection />
     </>
   );
 }

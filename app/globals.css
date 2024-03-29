@@ -35,11 +35,12 @@
 
 
 html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   scroll-snap-type: y mandatory;
 }
 
 section {
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   perspective: 500px;
   min-height: 100vh;
 }

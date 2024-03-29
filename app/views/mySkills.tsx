@@ -27,22 +27,37 @@ const MySkillsSection = () => {
   }, []);
 
   //
-  const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"];
-  const duplicatedItems = [...items, ...items];
+  const skills = [
+    "React",
+    "React Native",
+    "Typescript",
+    "NodeJS",
+    "Express",
+    "MongoDB",
+    "PostgreSQL",
+    "GraphQL",
+    "REST API",
+    "Firebase",
+    "AWS",
+    "Docker",
+  ];
+  const duplicatedItems = [...skills];
 
   return (
-    <section className="min-h-[40vh] bg-red-400 text-white">
-      <h1>my skills</h1>
+    <section className="min-h-[100vh] bg-black text-white mb-6 flex justify-center items-start flex-col">
+      <h1 className="text-[160px] font-bold tracking-tight px-[5%]">
+        Languages
+      </h1>
 
       <ul
         ref={listRef}
-        className="flex list-none h-[400px] w-full overflow-x-scroll px-5 mx-0 my-auto"
+        className="flex list-none w-full overflow-x-scroll px-5 mx-0"
       >
         {duplicatedItems.map((item, index) => (
           <motion.li
             animate={controls}
             key={index}
-            className="flex-[0_0_30vw] mr-5 even:bg-red-400 text-white odd:bg-slate-400 last:mr-0"
+            className="gap-x-10 mr-5 text-white last:mr-0 text-6xl first:before:content-[''] before:content-['/'] before:mr-5 before:font-light"
           >
             {item}
           </motion.li>

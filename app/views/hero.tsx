@@ -17,7 +17,7 @@ export const HeroSection = () => {
         ref={ref}
       >
         <div className="flex justify-start items-end">
-          <h1 className="font-mono text-[160px] font-bold text-white leading-[140px] flex-1">
+          <h1 className="text-[160px] font-bold text-white leading-[140px] flex-1">
             Hi, I am Aabhushan
           </h1>
 
