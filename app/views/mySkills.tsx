@@ -44,7 +44,7 @@ const MySkillsSection = () => {
   const duplicatedItems = [...skills];
 
   return (
-    <section className='min-h-[100vh] bg-appGray text-white mb-6 flex justify-center items-start flex-col'>
+    <section className='min-h-[50vh] bg-appGray text-white mb-6 flex justify-center items-start flex-col'>
       <h1 className='text-[160px] font-bold tracking-tight px-[5%]'>
         Languages
       </h1>
